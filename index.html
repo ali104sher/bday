@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Princess Lathiga</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="particles-container"></div>
+
+    <!-- 1. LOCK SCREEN VIEW -->
+    <div id="view-lock" class="view active-view">
+        <div class="glass-panel lock-panel">
+            <div class="lock-header">
+                <h1>For Her Eyes Only</h1>
+                <p>Enter the Royal Passcode</p>
+            </div>
+            
+            <div class="passcode-display" id="dots-container">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            </div>
+
+            <div class="keypad">
+                <button class="key" onclick="pressKey('2')">2</button>
+                <button class="key" onclick="pressKey('4')">4</button>
+                <button class="key" onclick="pressKey('7')">7</button>
+                <button class="key" onclick="pressKey('8')">8</button>
+                <button class="key" onclick="pressKey('5')">5</button>
+                <button class="key" onclick="pressKey('6')">6</button>
+                <button class="key" onclick="pressKey('9')">9</button>
+                <button class="key" onclick="pressKey('0')">0</button>
+                <button class="key" onclick="pressKey('3')">3</button>
+                <button class="key action-key" onclick="clearPasscode()">CLR</button>
+                <button class="key" onclick="pressKey('1')">1</button>
+                <button class="key action-key" onclick="submitPasscode()">ENT</button>
+            </div>
+            <p id="error-msg">Incorrect passcode, my love.</p>
+        </div>
+    </div>
+
+    <!-- 2. TRANSITION VIEW -->
+    <div id="view-transition" class="view">
+        <div class="flower-emoji" id="flower">🌸</div>
+    </div>
+
+    <!-- 3. MAIN DASHBOARD VIEW (Extremely Long Scroll) -->
+    <div id="view-main" class="view">
+        
+        <!-- Section 1: Hero Banner -->
+        <section class="fullscreen-section" id="hero-section">
+            <header>
+                <h1>Happy Birthday</h1>
+                <h2>Princess Lathiga</h2>
+                <div class="scroll-indicator">
+                    <p>Scroll to begin the journey</p>
+                    <span>↓</span>
+                </div>
+            </header>
+        </section>
+
+        <!-- Section 2: Royal Decree -->
+        <section class="fullscreen-section">
+            <div class="container">
+                <div class="glass-panel royal-letter">
+                    <div class="crown-icon">👑</div>
+                    <h3>The Royal Decree</h3>
+                    <p>
+                        On this beautiful day, the world celebrates the gift of you, but I celebrate you every single day. <br><br>
+                        You are my princess, my heart. May this year bring you as much joy, beauty, and love as you bring into my life.
+                    </p>
+                    <div class="signature">Yours forever,<br>Alisher</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Journey -->
+        <section class="fullscreen-section">
+            <div class="container">
+                <div class="glass-panel feature-section">
+                    <h3>A Journey of Us</h3>
+                    <p class="subtitle">Every step with you is magical...</p>
+                    <p class="paragraph-text">
+                        From exploring the beautiful sights of Coimbatore together, to the quiet, simple moments we share at home, every memory we create is a treasure for me. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Her Passions -->
+        <section class="fullscreen-section">
+            <div class="container">
+                <div class="glass-panel feature-section">
+                    <h3>Her Royal Graces</h3>
+                    <p class="paragraph-text">
+                        You are a masterpiece. I love you so much wifey.. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Royal Banquet -->
+        <section class="fullscreen-section">
+            <div class="container">
+                <div class="glass-panel feature-section">
+                    <h3>The Royal Banquets</h3>
+                    <p class="paragraph-text">
+                        To the endless plates(leaves..) of dosa and idli we've shared, the late-night pizza cravings, and the best dosa in the town.. every meal shared with you feels like a feast meant for a queen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Spotify -->
+        <!-- Section 7: Spotify -->
+        <section class="fullscreen-section">
+            <div class="container">
+                <div class="glass-panel feature-section">
+                    <h3>Our Royal Melody</h3>
+                    <p class="subtitle">A soundtrack for our love</p>
+                    
+                    <!-- Your New Spotify Playlist -->
+                    <iframe style="border-radius:12px; border: none; margin-top: 15px;" src="https://open.spotify.com/embed/playlist/37i9dQZF1EJMJTpr1lj8bB?utm_source=generator&si=a0485e36d2ea42e0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+        </section>>
+
+        <!-- Section 8: Interactive Cake -->
+        <section class="fullscreen-section">
+            <div class="container">
+                <div class="glass-panel feature-section">
+                    <h3>Make a Royal Wish</h3>
+                    <p class="subtitle">Tap the cake to blow out the candles!</p>
+                    <div class="cake-container" onclick="blowCandles()">
+                        <span id="cake-emoji">🎂</span>
+                    </div>
+                    <p id="wish-msg">May all your dreams come true! ✨</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Game & Gallery -->
+        <section class="fullscreen-section" style="padding-bottom: 100px;">
+            <div class="container">
+                <div class="glass-panel feature-section" id="game-container">
+                    <h3>A Little Game for You</h3>
+                    <p class="subtitle">Catch the floating heart 3 times...</p>
+                    <div class="game-area">
+                        <div id="floating-heart" onclick="catchHeart()">💖</div>
+                    </div>
+                    <div id="game-win-msg">
+                        <h3>You captured my heart!</h3>
+                        <p>I love you infinitely.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 80px;">
+                    <button class="btn-royal" onclick="openGallery()">Enter The Grand Gallery 🏰</button>
+                    <p style="margin-top: 15px; color: var(--royal-gold); font-size: 14px;">(Prepare for 78 beautiful memories)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 4. GALLERY VIEW -->
+    <div id="view-gallery" class="view">
+        <div class="gallery-header">
+            <button class="btn-back" onclick="switchView('view-main')">← Return to Castle</button>
+            <h2>The Royal Gallery</h2>
+            <div style="width: 140px;"></div>
+        </div>
+
+        <div class="full-media-container" id="media-container">
+            <!-- Media injected safely by JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
