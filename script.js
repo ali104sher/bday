@@ -118,7 +118,7 @@ function openGallery() {
         }
 
         // 76 Photos - Now looking inside the 'photos' folder for 1.jpg, 2.jpg, etc.
-        for(let i = 1; i <= 75; i++) {
+        for(let i = 1; i <= 72; i++) {
             htmlContent += `
                 <div class="media-item">
                     <img src="photos/${i}.jpg" alt="Memory ${i}" loading="lazy" onerror="this.style.display='none'">
